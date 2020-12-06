@@ -1,17 +1,11 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def get_questions():
-    return [
-        'What is the size of a button?'
-    ]
-
+from transformers import pipeline
+from Questioner import Questioner
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    context = 'Button is orange and says click me. Button is also small.'
+    questioner = Questioner()
+    answers = questioner.examine_context(context)
+    print(answers)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
