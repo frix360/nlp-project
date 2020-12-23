@@ -1,0 +1,150 @@
+Specification,Keyword,RGB hex value
+CSS Level 1,black,000000
+CSS Level 1,silver,c0c0c0
+CSS Level 1,gray,808080
+CSS Level 1,white,ffffff
+CSS Level 1,maroon,800000
+CSS Level 1,red,ff0000
+CSS Level 1,purple,800080
+CSS Level 1,fuchsia,ff00ff
+CSS Level 1,green,008000
+CSS Level 1,lime,00ff00
+CSS Level 1,olive,808000
+CSS Level 1,yellow,ffff00
+CSS Level 1,navy,000080
+CSS Level 1,blue,0000ff
+CSS Level 1,teal,008080
+CSS Level 1,aqua,00ffff
+CSS Level 2 (Revision 1),orange,ffa500
+CSS Color Module Level 3,alice blue,f0f8ff
+CSS Color Module Level 3,antique white,faebd7
+CSS Color Module Level 3,aquamarine,7fffd4
+CSS Color Module Level 3,azure,f0ffff
+CSS Color Module Level 3,beige,f5f5dc
+CSS Color Module Level 3,bisque,ffe4c4
+CSS Color Module Level 3,blanchedalmond,ffebcd
+CSS Color Module Level 3,blue violet,8a2be2
+CSS Color Module Level 3,brown,a52a2a
+CSS Color Module Level 3,burly wood,deb887
+CSS Color Module Level 3,cadet blue,5f9ea0
+CSS Color Module Level 3,chartreuse,7fff00
+CSS Color Module Level 3,chocolate,d2691e
+CSS Color Module Level 3,coral,ff7f50
+CSS Color Module Level 3,corn flower blue,6495ed
+CSS Color Module Level 3,corn silk,fff8dc
+CSS Color Module Level 3,crimson,#dc143c
+CSS Color Module Level 3,cyan,#00ffff
+CSS Color Module Level 3,aqua,#00ffff
+CSS Color Module Level 3,dark blue,#00008b
+CSS Color Module Level 3,dark cyan,#008b8b
+CSS Color Module Level 3,dark goldenrod,#b8860b
+CSS Color Module Level 3,dark gray,#a9a9a9
+CSS Color Module Level 3,dark green,#006400
+CSS Color Module Level 3,dark grey,#a9a9a9
+CSS Color Module Level 3,dark khaki,#bdb76b
+CSS Color Module Level 3,dark magenta,#8b008b
+CSS Color Module Level 3,dark olive green,#556b2f
+CSS Color Module Level 3,dark orange,#ff8c00
+CSS Color Module Level 3,dark orchid,#9932cc
+CSS Color Module Level 3,dark red,#8b0000
+CSS Color Module Level 3,dark salmon,#e9967a
+CSS Color Module Level 3,dark seagreen,#8fbc8f
+CSS Color Module Level 3,dark slate blue,#483d8b
+CSS Color Module Level 3,dark slate gray,#2f4f4f
+CSS Color Module Level 3,dark slate grey,#2f4f4f
+CSS Color Module Level 3,dark turquoise,#00ced1
+CSS Color Module Level 3,dark violet,#9400d3
+CSS Color Module Level 3,deep pink,#ff1493
+CSS Color Module Level 3,deep skyblue,#00bfff
+CSS Color Module Level 3,dim gray,#696969
+CSS Color Module Level 3,dim grey,#696969
+CSS Color Module Level 3,dodger blue,#1e90ff
+CSS Color Module Level 3,fire brick,#b22222
+CSS Color Module Level 3,floral white,#fffaf0
+CSS Color Module Level 3,forest green,#228b22
+CSS Color Module Level 3,gainsboro,#dcdcdc
+CSS Color Module Level 3,ghost white,#f8f8ff
+CSS Color Module Level 3,gold,#ffd700
+CSS Color Module Level 3,golden rod,#daa520
+CSS Color Module Level 3,green yellow,#adff2f
+CSS Color Module Level 3,grey,#808080
+CSS Color Module Level 3,honey dew,#f0fff0
+CSS Color Module Level 3,hot pink,#ff69b4
+CSS Color Module Level 3,indian red,#cd5c5c
+CSS Color Module Level 3,indigo,#4b0082
+CSS Color Module Level 3,ivory,#fffff0
+CSS Color Module Level 3,khaki,#f0e68c
+CSS Color Module Level 3,lavender,#e6e6fa
+CSS Color Module Level 3,lavender blush,#fff0f5
+CSS Color Module Level 3,lawn green,#7cfc00
+CSS Color Module Level 3,lemon chiffon,#fffacd
+CSS Color Module Level 3,light blue,#add8e6
+CSS Color Module Level 3,light coral,#f08080
+CSS Color Module Level 3,light cyan,#e0ffff
+CSS Color Module Level 3,light goldenrod yellow,#fafad2
+CSS Color Module Level 3,light gray,#d3d3d3
+CSS Color Module Level 3,light green,#90ee90
+CSS Color Module Level 3,light grey,#d3d3d3
+CSS Color Module Level 3,light pink,#ffb6c1
+CSS Color Module Level 3,light salmon,#ffa07a
+CSS Color Module Level 3,light seagreen,#20b2aa
+CSS Color Module Level 3,light skyblue,#87cefa
+CSS Color Module Level 3,light slate gray,#778899
+CSS Color Module Level 3,light steel blue,#b0c4de
+CSS Color Module Level 3,light yellow,#ffffe0
+CSS Color Module Level 3,lime green,#32cd32
+CSS Color Module Level 3,linen,#faf0e6
+CSS Color Module Level 3,magenta,#ff00ff
+CSS Color Module Level 3,fuchsia,#ff00ff
+CSS Color Module Level 3,medium aquamarine,#66cdaa
+CSS Color Module Level 3,medium blue,#0000cd
+CSS Color Module Level 3,medium orchid,#ba55d3
+CSS Color Module Level 3,medium purple,#9370db
+CSS Color Module Level 3,medium seagreen,#3cb371
+CSS Color Module Level 3,medium slateblue,#7b68ee
+CSS Color Module Level 3,medium springgreen,#00fa9a
+CSS Color Module Level 3,medium turquoise,#48d1cc
+CSS Color Module Level 3,medium violetred,#c71585
+CSS Color Module Level 3,midnight blue,#191970
+CSS Color Module Level 3,mint cream,#f5fffa
+CSS Color Module Level 3,mist yrose,#ffe4e1
+CSS Color Module Level 3,moccasin,#ffe4b5
+CSS Color Module Level 3,navajo white,#ffdead
+CSS Color Module Level 3,old lace,#fdf5e6
+CSS Color Module Level 3,olive drab,#6b8e23
+CSS Color Module Level 3,orange red,#ff4500
+CSS Color Module Level 3,orchid,#da70d6
+CSS Color Module Level 3,pale goldenrod,#eee8aa
+CSS Color Module Level 3,pale green,#98fb98
+CSS Color Module Level 3,pale turquoise,#afeeee
+CSS Color Module Level 3,pale violetred,#db7093
+CSS Color Module Level 3,papaya whip,#ffefd5
+CSS Color Module Level 3,peach puff,#ffdab9
+CSS Color Module Level 3,peru,#cd853f
+CSS Color Module Level 3,pink,#ffc0cb
+CSS Color Module Level 3,plum,#dda0dd
+CSS Color Module Level 3,powder blue,#b0e0e6
+CSS Color Module Level 3,rosy brown,#bc8f8f
+CSS Color Module Level 3,royal blue,#4169e1
+CSS Color Module Level 3,saddle brown,#8b4513
+CSS Color Module Level 3,salmon,#fa8072
+CSS Color Module Level 3,sandy brown,#f4a460
+CSS Color Module Level 3,seagreen,#2e8b57
+CSS Color Module Level 3,seashell,#fff5ee
+CSS Color Module Level 3,sienna,#a0522d
+CSS Color Module Level 3,sky blue,#87ceeb
+CSS Color Module Level 3,slate blue,#6a5acd
+CSS Color Module Level 3,slate gray,#708090
+CSS Color Module Level 3,slate grey,#708090
+CSS Color Module Level 3,snow,#fffafa
+CSS Color Module Level 3,spring green,#00ff7f
+CSS Color Module Level 3,steel blue,#4682b4
+CSS Color Module Level 3,tan,#d2b48c
+CSS Color Module Level 3,thistle,#d8bfd8
+CSS Color Module Level 3,tomato,#ff6347
+CSS Color Module Level 3,turquoise,#40e0d0
+CSS Color Module Level 3,violet,#ee82ee
+CSS Color Module Level 3,wheat,#f5deb3
+CSS Color Module Level 3,whitesmoke,#f5f5f5
+CSS Color Module Level 3,yellow green,#9acd32
+CSS Color Module Level 4,rebecca purple,#663399
