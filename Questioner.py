@@ -12,12 +12,12 @@ class Questioner:
     def examine_context(self, context):
         self.context = context
         types = self.questions_manager.get_types()
-        answers = []
+        answers = {}
         for question_type in types:
             questions = self.questions_manager.get_questions_by_type(question_type)
             type_answers = self.__ask_questions(questions)
             best_answer = Questioner.get_best_answer(type_answers)
-            answers.append(best_answer)
+            answers[question_type] = best_answer
         return answers
 
     def __ask_questions(self, questions):

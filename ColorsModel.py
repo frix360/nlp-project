@@ -1,71 +1,60 @@
 import tensorflow as tf
+import scipy.stats as stats
+import numpy as np
+import pickle
 from tensorflow.python import keras
-from tensorflow.python.keras import preprocessing
-from tensorflow.python.keras.preprocessing.text import Tokenizer
 from tensorflow.python.keras.models import Sequential
 from tensorflow.python.keras.layers import Dense, Dropout, LSTM, Reshape
-from keras.utils import np_utils
-
-import scipy.stats as stats
-
-import numpy as np
-import pandas
+from DataTransformer import DataTransformer
 
 
-def norm(value):
-    return value / 255.0
+class ColorsModel:
+    def __init__(self, tokenizer_file_name, num_classes=28, maxlen=25, saved_model=None):
+        self.maxlen = maxlen
+        self.num_classes = num_classes
+        self.history = None
+        self.__initialize_model()
+        self.data_transformer = DataTransformer(maxlen, num_classes)
+        if saved_model is not None:
+            self.data_transformer.tokenizer = self.load_tokenizer(tokenizer_file_name)
+            self.__load_saved_model(saved_model)
 
+    def __load_saved_model(self, saved_model):
+        self.model.load_weights(saved_model)
 
-def scale(n):
-    return int(n * 255)
+    def __initialize_model(self):
+        self.model = Sequential()
+        self.model.add(LSTM(256, return_sequences=True, input_shape=(self.maxlen, self.num_classes)))
+        self.model.add(LSTM(128))
+        self.model.add(Dense(128, activation='relu'))
+        self.model.add(Dense(3, activation='sigmoid'))
+        self.model.compile(optimizer='adam', loss='mse', metrics=['acc'])
+        self.model.summary()
 
+    def __scale(self, n):
+        return int(n * 255)
 
-def predict(name):
-    name = name.lower()
-    tokenized = t.texts_to_sequences([name])
-    padded = preprocessing.sequence.pad_sequences(tokenized, maxlen=maxlen)
-    one_hot = np_utils.to_categorical(padded, num_classes=num_classes)
-    pred = model.predict(np.array(one_hot))[0]
-    r, g, b = scale(pred[0]), scale(pred[1]), scale(pred[2])
-    print(name + ',', 'R,G,B:', r, g, b)
+    def predict(self, color):
+        one_hot = self.data_transformer.transform_prediction_data(name=color)
+        pred = self.model.predict(one_hot)[0]
+        return [self.__scale(pred[0]), self.__scale(pred[1]), self.__scale(pred[2])]
 
+    def fit(self, data, colors, epohs=40, batch_size=32, validation_split=0.1):
+        normalized_values, one_hot_names = self.data_transformer.transform_input_data(data=data, colors=colors)
+        self.save_tokenizer('tokenizer.pickle')
+        self.history = self.model.fit(one_hot_names, normalized_values, epohs, batch_size, validation_split)
 
-data = pandas.read_csv('set_0.csv')
-
-data.head()
-
-names = data["name"]
-
-maxlen = 25
-t = Tokenizer(char_level=True)
-t.fit_on_texts(names)  # [1: 'I', 2, 3, 4]
-tokenized = t.texts_to_sequences(names)  # [sen, sen] -> [[1, 2, 3, 4], [4, 2, 3, 5]]
-padded_names = preprocessing.sequence.pad_sequences(tokenized, maxlen=maxlen)
-
-one_hot_names = np_utils.to_categorical(padded_names)
-num_classes = one_hot_names.shape[-1]
-normalized_values = np.column_stack([norm(data["red"]), norm(data["green"]), norm(data["blue"])])
-
-model = Sequential()
-model.add(LSTM(256, return_sequences=True, input_shape=(maxlen, num_classes)))
-model.add(LSTM(128))
-model.add(Dense(128, activation='relu'))
-model.add(Dense(3, activation='sigmoid'))
-model.compile(optimizer='adam', loss='mse', metrics=['acc'])
-model.summary()
-
-# model.load_weights('./models/model_2.h5')
-
-# color_name = 'Keras red'
-# predict(color_name)
-
-history = model.fit(one_hot_names, normalized_values,
-                    epochs=40,
-                    batch_size=32,
-                    validation_split=0.1)
-#
-
-model.save_weights('./models/model_3.h5')
-
-color_name = 'Keras red'
-predict(color_name)
+    def save_model(self, file_name):
+        self.model.save_weights(file_name)
+    
+    def save_tokenizer(self, file_name):
+        with open(file_name, 'wb') as handle:
+            pickle.dump(self.data_transformer.tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    
+    def load_tokenizer(self, file_name):
+        with open(file_name, 'rb') as handle:
+            return pickle.load(handle)
+    
+    def save_progress(self, model_file_name, tokenizer_file_name):
+        self.save_model(model_file_name)
+        self.save_tokenizer(tokenizer_file_name)
