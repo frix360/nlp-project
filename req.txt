@@ -78,6 +78,7 @@ pyparsing=2.4.7=py_0
 pysocks=1.7.1=py37_1
 python=3.7.9=h7579374_0
 python_abi=3.7=1_cp37m
+pandas=4.9.2=py38h06a4308_0
 pytorch=1.5.1=py3.7_cpu_0
 readline=8.0=h7b6447c_0
 regex=2020.10.15=py37h7b6447c_0
@@ -110,3 +111,4 @@ yarl=1.6.2=py37h7b6447c_0
 zipp=3.4.0=pyhd3eb1b0_0
 zlib=1.2.11=h7b6447c_3
 zstd=1.4.5=h9ceee32_0
+
