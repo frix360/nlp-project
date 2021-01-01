@@ -7,9 +7,8 @@ from tensorflow.python.keras.models import Sequential
 from tensorflow.python.keras.layers import Dense, Dropout, LSTM, Reshape
 from DataTransformer import DataTransformer
 
-
-class ColorsModel:
-    def __init__(self, tokenizer_file_name, num_classes=28, maxlen=25, saved_model=None):
+class SizeModel:
+    def __init__(self, tokenizer_file_name, num_classes=28, maxlen=15, saved_model=None):
         self.maxlen = maxlen
         self.num_classes = num_classes
         self.history = None
@@ -24,25 +23,34 @@ class ColorsModel:
 
     def __initialize_model(self):
         self.model = Sequential()
-        self.model.add(LSTM(256, return_sequences=True, input_shape=(self.maxlen, self.num_classes)))
-        self.model.add(LSTM(128))
-        self.model.add(Dense(128, activation='relu'))
-        self.model.add(Dense(3, activation='sigmoid'))
+        self.model.add(LSTM(128, return_sequences=True, input_shape=(self.maxlen, self.num_classes)))
+        self.model.add(LSTM(64))
+        self.model.add(Dense(64, activation='relu'))
+        self.model.add(Dense(1, activation='sigmoid'))
         self.model.compile(optimizer='adam', loss='mse', metrics=['acc'])
         self.model.summary()
+        
+        # self.model = Sequential()
+        # self.model.add(LSTM(12, return_sequences=True, input_shape=(self.maxlen, self.num_classes)))
+        # self.model.add(LSTM(4))
+        # self.model.add(Dense(4, activation='relu'))
+        # self.model.add(Dense(1, activation='sigmoid'))
+        # self.model.compile(optimizer='adam', loss='mse', metrics=['acc'])
+        # self.model.summary()
+
+    def predict(self, size):
+        one_hot = self.data_transformer.transform_prediction_data(name=size)
+        pred = self.model.predict(one_hot)[0]
+        return pred[0]
+
+    def fit(self, data, sizes, epohs=40, batch_size=32, validation_split=0.1):
+        normalized_values, one_hot_names = self.data_transformer.transform_size_input_data(data=data, names=sizes)
+        self.save_tokenizer('lstm_tokenizer.pickle')
+        self.history = self.model.fit(x=one_hot_names, y=normalized_values, epochs=epohs, batch_size=batch_size, validation_split=validation_split, verbose=1)
 
     def __scale(self, n):
-        return int(n * 255)
-
-    def predict(self, color):
-        one_hot = self.data_transformer.transform_prediction_data(name=color)
-        pred = self.model.predict(one_hot)[0]
-        return [self.__scale(pred[0]), self.__scale(pred[1]), self.__scale(pred[2])]
-
-    def fit(self, data, colors, epohs=40, batch_size=32, validation_split=0.1):
-        normalized_values, one_hot_names = self.data_transformer.transform_colors_input_data(data=data, colors=colors)
-        self.save_tokenizer('tokenizer.pickle')
-        self.history = self.model.fit(one_hot_names, normalized_values, epohs, batch_size, validation_split)
+        MAX_RATIO = 2.1597913294039186
+        return n * MAX_RATIO
 
     def save_model(self, file_name):
         self.model.save_weights(file_name)

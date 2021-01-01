@@ -1,0 +1,883 @@
+name,size
+minuscule,0.34
+very minuscule,0.19
+less minuscule,0.49
+more minuscule,0.28
+much minuscule,0.23
+really minuscule,0.21
+undersize,0.31
+very undersize,0.17
+less undersize,0.44
+more undersize,0.26
+much undersize,0.21
+really undersize,0.19
+teentsy,0.36
+very teentsy,0.2
+less teentsy,0.52
+more teentsy,0.3
+much teentsy,0.24
+really teentsy,0.23
+olive-sized,0.31
+very olive-sized,0.17
+less olive-sized,0.44
+more olive-sized,0.26
+much olive-sized,0.21
+really olive-sized,0.19
+flyspeck,0.39
+very flyspeck,0.22
+less flyspeck,0.56
+more flyspeck,0.33
+much flyspeck,0.26
+really flyspeck,0.25
+weeny,0.32
+very weeny,0.18
+less weeny,0.46
+more weeny,0.27
+much weeny,0.21
+really weeny,0.2
+weensy,0.32
+very weensy,0.18
+less weensy,0.45
+more weensy,0.26
+much weensy,0.21
+really weensy,0.2
+tiny,0.29
+very tiny,0.16
+less tiny,0.41
+more tiny,0.24
+much tiny,0.19
+really tiny,0.18
+size,1.09
+very size,1.96
+less size,0.76
+more size,1.31
+much size,1.64
+really size,1.74
+pocketable,0.28
+very pocketable,0.15
+less pocketable,0.4
+more pocketable,0.23
+much pocketable,0.18
+really pocketable,0.17
+subatomic,0.32
+very subatomic,0.18
+less subatomic,0.45
+more subatomic,0.26
+much subatomic,0.21
+really subatomic,0.2
+smaller,0.26
+very smaller,0.14
+less smaller,0.37
+more smaller,0.22
+much smaller,0.17
+really smaller,0.16
+teeny,0.24
+very teeny,0.13
+less teeny,0.34
+more teeny,0.2
+much teeny,0.16
+really teeny,0.15
+microscopic,0.24
+very microscopic,0.13
+less microscopic,0.34
+more microscopic,0.2
+much microscopic,0.16
+really microscopic,0.15
+petite,0.32
+very petite,0.18
+less petite,0.46
+more petite,0.27
+much petite,0.22
+really petite,0.2
+diminutive,0.33
+very diminutive,0.18
+less diminutive,0.47
+more diminutive,0.28
+much diminutive,0.22
+really diminutive,0.21
+minute,0.3
+very minute,0.16
+less minute,0.42
+more minute,0.25
+much minute,0.2
+really minute,0.18
+lesser,0.22
+very lesser,0.12
+less lesser,0.31
+more lesser,0.18
+much lesser,0.15
+really lesser,0.14
+miniscule,0.35
+very miniscule,0.2
+less miniscule,0.5
+more miniscule,0.29
+much miniscule,0.23
+really miniscule,0.22
+wee,0.38
+very wee,0.21
+less wee,0.54
+more wee,0.31
+much wee,0.25
+really wee,0.23
+teensy,0.38
+very teensy,0.21
+less teensy,0.55
+more teensy,0.32
+much teensy,0.26
+really teensy,0.24
+miniature,0.37
+very miniature,0.2
+less miniature,0.53
+more miniature,0.31
+much miniature,0.25
+really miniature,0.23
+elflike,0.38
+very elflike,0.21
+less elflike,0.54
+more elflike,0.32
+much elflike,0.25
+really elflike,0.24
+slender,0.38
+very slender,0.21
+less slender,0.55
+more slender,0.32
+much slender,0.26
+really slender,0.24
+microscopical,0.31
+very microscopical,0.17
+less microscopical,0.44
+more microscopical,0.26
+much microscopical,0.21
+really microscopical,0.19
+slim,0.28
+very slim,0.15
+less slim,0.4
+more slim,0.23
+much slim,0.19
+really slim,0.17
+lilliputian,0.34
+very lilliputian,0.19
+less lilliputian,0.49
+more lilliputian,0.28
+much lilliputian,0.23
+really lilliputian,0.21
+undersized,0.26
+very undersized,0.14
+less undersized,0.36
+more undersized,0.21
+much undersized,0.17
+really undersized,0.16
+littler,0.36
+very littler,0.2
+less littler,0.52
+more littler,0.3
+much littler,0.24
+really littler,0.23
+infinitesimal,0.37
+very infinitesimal,0.21
+less infinitesimal,0.53
+more infinitesimal,0.31
+much infinitesimal,0.25
+really infinitesimal,0.23
+small-scale,0.38
+very small-scale,0.21
+less small-scale,0.54
+more small-scale,0.32
+much small-scale,0.25
+really small-scale,0.24
+bitty,0.32
+very bitty,0.18
+less bitty,0.45
+more bitty,0.26
+much bitty,0.21
+really bitty,0.2
+midget,0.39
+very midget,0.22
+less midget,0.56
+more midget,0.32
+much midget,0.26
+really midget,0.24
+atomic,0.32
+very atomic,0.18
+less atomic,0.45
+more atomic,0.26
+much atomic,0.21
+really atomic,0.2
+teensy-weensy,0.29
+very teensy-weensy,0.16
+less teensy-weensy,0.41
+more teensy-weensy,0.24
+much teensy-weensy,0.19
+really teensy-weensy,0.18
+puny,0.33
+very puny,0.18
+less puny,0.47
+more puny,0.28
+much puny,0.22
+really puny,0.21
+shrimpy,0.4
+very shrimpy,0.22
+less shrimpy,0.57
+more shrimpy,0.33
+much shrimpy,0.27
+really shrimpy,0.25
+runty,0.38
+very runty,0.21
+less runty,0.55
+more runty,0.32
+much runty,0.26
+really runty,0.24
+gnomish,0.36
+very gnomish,0.2
+less gnomish,0.51
+more gnomish,0.3
+much gnomish,0.24
+really gnomish,0.22
+elfin,0.22
+very elfin,0.12
+less elfin,0.31
+more elfin,0.18
+much elfin,0.14
+really elfin,0.14
+pocket-size,0.32
+very pocket-size,0.18
+less pocket-size,0.46
+more pocket-size,0.27
+much pocket-size,0.22
+really pocket-size,0.2
+half-size,0.3
+very half-size,0.17
+less half-size,0.42
+more half-size,0.25
+much half-size,0.2
+really half-size,0.19
+little,0.33
+very little,0.18
+less little,0.47
+more little,0.27
+much little,0.22
+really little,0.2
+dinky,0.37
+very dinky,0.21
+less dinky,0.53
+more dinky,0.31
+much dinky,0.25
+really dinky,0.23
+micro,0.25
+very micro,0.14
+less micro,0.36
+more micro,0.21
+much micro,0.17
+really micro,0.16
+itsy-bitsy,0.35
+very itsy-bitsy,0.19
+less itsy-bitsy,0.49
+more itsy-bitsy,0.29
+much itsy-bitsy,0.23
+really itsy-bitsy,0.22
+bantam,0.22
+very bantam,0.12
+less bantam,0.32
+more bantam,0.19
+much bantam,0.15
+really bantam,0.14
+bittie,0.24
+very bittie,0.14
+less bittie,0.35
+more bittie,0.2
+much bittie,0.16
+really bittie,0.15
+dwarfish,0.36
+very dwarfish,0.2
+less dwarfish,0.51
+more dwarfish,0.3
+much dwarfish,0.24
+really dwarfish,0.22
+teeny-weeny,0.27
+very teeny-weeny,0.15
+less teeny-weeny,0.38
+more teeny-weeny,0.22
+much teeny-weeny,0.18
+really teeny-weeny,0.17
+smallish,0.36
+very smallish,0.2
+less smallish,0.52
+more smallish,0.3
+much smallish,0.24
+really smallish,0.23
+itty-bitty,0.22
+very itty-bitty,0.12
+less itty-bitty,0.31
+more itty-bitty,0.18
+much itty-bitty,0.15
+really itty-bitty,0.14
+pocket-sized,0.23
+very pocket-sized,0.13
+less pocket-sized,0.33
+more pocket-sized,0.19
+much pocket-sized,0.15
+really pocket-sized,0.14
+smallest,0.06
+very smallest,0.04
+less smallest,0.09
+more smallest,0.05
+much smallest,0.04
+really smallest,0.04
+small,0.34
+very small,0.19
+less small,0.49
+more small,0.28
+much small,0.23
+really small,0.21
+mean,0.41
+very mean,0.74
+less mean,0.29
+more mean,0.49
+much mean,0.61
+really mean,0.65
+normal,0.51
+very normal,0.93
+less normal,0.36
+more normal,0.62
+much normal,0.77
+really normal,0.82
+average,0.58
+very average,1.05
+less average,0.41
+more average,0.7
+much average,0.87
+really average,0.93
+biggish,1.1
+very biggish,1.98
+less biggish,0.77
+more biggish,1.32
+much biggish,1.65
+really biggish,1.76
+macroscopic,1.06
+very macroscopic,1.91
+less macroscopic,0.74
+more macroscopic,1.27
+much macroscopic,1.59
+really macroscopic,1.7
+jumbo,1.09
+very jumbo,1.97
+less jumbo,0.77
+more jumbo,1.31
+much jumbo,1.64
+really jumbo,1.75
+blown-up,1.16
+very blown-up,2.09
+less blown-up,0.81
+more blown-up,1.39
+much blown-up,1.74
+really blown-up,1.86
+thumping,1.18
+very thumping,2.12
+less thumping,0.82
+more thumping,1.41
+much thumping,1.76
+really thumping,1.88
+massive,1.16
+very massive,2.09
+less massive,0.81
+more massive,1.39
+much massive,1.74
+really massive,1.86
+wide,1.04
+very wide,1.87
+less wide,0.73
+more wide,1.25
+much wide,1.56
+really wide,1.66
+wide-ranging,1.2
+very wide-ranging,2.16
+less wide-ranging,0.84
+more wide-ranging,1.44
+much wide-ranging,1.8
+really wide-ranging,1.92
+puffy,1.13
+very puffy,2.03
+less puffy,0.79
+more puffy,1.35
+much puffy,1.69
+really puffy,1.8
+overlarge,1.02
+very overlarge,1.83
+less overlarge,0.71
+more overlarge,1.22
+much overlarge,1.53
+really overlarge,1.63
+voluminous,1.15
+very voluminous,2.06
+less voluminous,0.8
+more voluminous,1.37
+much voluminous,1.72
+really voluminous,1.83
+tremendous,1.2
+very tremendous,2.16
+less tremendous,0.84
+more tremendous,1.44
+much tremendous,1.8
+really tremendous,1.92
+bouffant,1.08
+very bouffant,1.94
+less bouffant,0.76
+more bouffant,1.3
+much bouffant,1.62
+really bouffant,1.73
+hulky,1.14
+very hulky,2.04
+less hulky,0.79
+more hulky,1.36
+much hulky,1.7
+really hulky,1.82
+volumed,1.06
+very volumed,1.91
+less volumed,0.74
+more volumed,1.28
+much volumed,1.59
+really volumed,1.7
+spacious,1.04
+very spacious,1.88
+less spacious,0.73
+more spacious,1.25
+much spacious,1.56
+really spacious,1.67
+stupendous,1.14
+very stupendous,2.06
+less stupendous,0.8
+more stupendous,1.37
+much stupendous,1.72
+really stupendous,1.83
+astronomic,1.0
+very astronomic,1.8
+less astronomic,0.7
+more astronomic,1.2
+much astronomic,1.5
+really astronomic,1.6
+capacious,1.16
+very capacious,2.1
+less capacious,0.82
+more capacious,1.4
+much capacious,1.75
+really capacious,1.86
+enormous,1.11
+very enormous,1.99
+less enormous,0.77
+more enormous,1.33
+much enormous,1.66
+really enormous,1.77
+deep,1.02
+very deep,1.84
+less deep,0.71
+more deep,1.22
+much deep,1.53
+really deep,1.63
+mammoth,1.02
+very mammoth,1.84
+less mammoth,0.72
+more mammoth,1.23
+much mammoth,1.54
+really mammoth,1.64
+life-sized,1.13
+very life-sized,2.03
+less life-sized,0.79
+more life-sized,1.36
+much life-sized,1.69
+really life-sized,1.81
+monstrous,1.17
+very monstrous,2.11
+less monstrous,0.82
+more monstrous,1.41
+much monstrous,1.76
+really monstrous,1.88
+too large,1.06
+very too large,1.9
+less too large,0.74
+more too large,1.27
+much too large,1.58
+really too large,1.69
+monumental,1.2
+very monumental,2.15
+less monumental,0.84
+more monumental,1.43
+much monumental,1.79
+really monumental,1.91
+gigantic,1.02
+very gigantic,1.84
+less gigantic,0.71
+more gigantic,1.22
+much gigantic,1.53
+really gigantic,1.63
+queen-size,1.17
+very queen-size,2.11
+less queen-size,0.82
+more queen-size,1.4
+much queen-size,1.76
+really queen-size,1.87
+titanic,1.08
+very titanic,1.94
+less titanic,0.76
+more titanic,1.3
+much titanic,1.62
+really titanic,1.73
+epic,1.02
+very epic,1.83
+less epic,0.71
+more epic,1.22
+much epic,1.52
+really epic,1.63
+larger-than-life,1.05
+very larger-than-life,1.9
+less larger-than-life,0.74
+more larger-than-life,1.27
+much larger-than-life,1.58
+really larger-than-life,1.69
+broad,1.16
+very broad,2.09
+less broad,0.81
+more broad,1.39
+much broad,1.74
+really broad,1.85
+gargantuan,1.17
+very gargantuan,2.11
+less gargantuan,0.82
+more gargantuan,1.41
+much gargantuan,1.76
+really gargantuan,1.88
+cosmic,1.03
+very cosmic,1.85
+less cosmic,0.72
+more cosmic,1.23
+much cosmic,1.54
+really cosmic,1.64
+monolithic,1.1
+very monolithic,1.99
+less monolithic,0.77
+more monolithic,1.33
+much monolithic,1.66
+really monolithic,1.77
+banging,1.13
+very banging,2.03
+less banging,0.79
+more banging,1.36
+much banging,1.7
+really banging,1.81
+large-mouthed,1.07
+very large-mouthed,1.92
+less large-mouthed,0.75
+more large-mouthed,1.28
+much large-mouthed,1.6
+really large-mouthed,1.71
+bulky,1.17
+very bulky,2.11
+less bulky,0.82
+more bulky,1.41
+much bulky,1.76
+really bulky,1.88
+Brobdingnagian,1.06
+very Brobdingnagian,1.9
+less Brobdingnagian,0.74
+more Brobdingnagian,1.27
+much Brobdingnagian,1.58
+really Brobdingnagian,1.69
+oversized,1.0
+very oversized,1.81
+less oversized,0.7
+more oversized,1.2
+much oversized,1.51
+really oversized,1.61
+man-sized,1.01
+very man-sized,1.81
+less man-sized,0.71
+more man-sized,1.21
+much man-sized,1.51
+really man-sized,1.61
+giant,1.14
+very giant,2.05
+less giant,0.8
+more giant,1.36
+much giant,1.7
+really giant,1.82
+oversize,1.11
+very oversize,2.0
+less oversize,0.78
+more oversize,1.33
+much oversize,1.67
+really oversize,1.78
+macroscopical,1.19
+very macroscopical,2.14
+less macroscopical,0.83
+more macroscopical,1.43
+much macroscopical,1.78
+really macroscopical,1.9
+heroic,1.19
+very heroic,2.14
+less heroic,0.83
+more heroic,1.43
+much heroic,1.78
+really heroic,1.9
+bigger,1.18
+very bigger,2.13
+less bigger,0.83
+more bigger,1.42
+much bigger,1.77
+really bigger,1.89
+outsized,1.01
+very outsized,1.82
+less outsized,0.71
+more outsized,1.21
+much outsized,1.51
+really outsized,1.61
+plumping,1.15
+very plumping,2.07
+less plumping,0.8
+more plumping,1.38
+much plumping,1.72
+really plumping,1.84
+outsize,1.14
+very outsize,2.05
+less outsize,0.8
+more outsize,1.37
+much outsize,1.71
+really outsize,1.82
+larger,1.13
+very larger,2.04
+less larger,0.79
+more larger,1.36
+much larger,1.7
+really larger,1.81
+medium-large,1.14
+very medium-large,2.06
+less medium-large,0.8
+more medium-large,1.37
+much medium-large,1.71
+really medium-large,1.83
+whopping,1.18
+very whopping,2.12
+less whopping,0.83
+more whopping,1.42
+much whopping,1.77
+really whopping,1.89
+king-size,1.13
+very king-size,2.03
+less king-size,0.79
+more king-size,1.35
+much king-size,1.69
+really king-size,1.8
+lifesize,1.07
+very lifesize,1.93
+less lifesize,0.75
+more lifesize,1.29
+much lifesize,1.61
+really lifesize,1.72
+large-scale,1.11
+very large-scale,1.99
+less large-scale,0.78
+more large-scale,1.33
+much large-scale,1.66
+really large-scale,1.77
+mountainous,1.04
+very mountainous,1.87
+less mountainous,0.73
+more mountainous,1.25
+much mountainous,1.56
+really mountainous,1.67
+macro,1.12
+very macro,2.01
+less macro,0.78
+more macro,1.34
+much macro,1.68
+really macro,1.79
+whacking,1.0
+very whacking,1.8
+less whacking,0.7
+more whacking,1.2
+much whacking,1.5
+really whacking,1.6
+colossal,1.03
+very colossal,1.85
+less colossal,0.72
+more colossal,1.24
+much colossal,1.55
+really colossal,1.65
+vast,1.07
+very vast,1.92
+less vast,0.75
+more vast,1.28
+much vast,1.6
+really vast,1.71
+grand,1.16
+very grand,2.08
+less grand,0.81
+more grand,1.39
+much grand,1.74
+really grand,1.85
+bear-sized,1.14
+very bear-sized,2.06
+less bear-sized,0.8
+more bear-sized,1.37
+much bear-sized,1.72
+really bear-sized,1.83
+sizable,1.07
+very sizable,1.92
+less sizable,0.75
+more sizable,1.28
+much sizable,1.6
+really sizable,1.71
+super,1.12
+very super,2.02
+less super,0.79
+more super,1.35
+much super,1.69
+really super,1.8
+extended,1.01
+very extended,1.81
+less extended,0.71
+more extended,1.21
+much extended,1.51
+really extended,1.61
+enlarged,1.03
+very enlarged,1.86
+less enlarged,0.72
+more enlarged,1.24
+much enlarged,1.55
+really enlarged,1.65
+great,1.2
+very great,2.15
+less great,0.84
+more great,1.44
+much great,1.79
+really great,1.91
+hulking,1.06
+very hulking,1.9
+less hulking,0.74
+more hulking,1.27
+much hulking,1.59
+really hulking,1.69
+large,1.08
+very large,1.94
+less large,0.76
+more large,1.29
+much large,1.62
+really large,1.73
+sizeable,1.11
+very sizeable,2.0
+less sizeable,0.78
+more sizeable,1.33
+much sizeable,1.66
+really sizeable,1.78
+largish,1.06
+very largish,1.91
+less largish,0.74
+more largish,1.27
+much largish,1.59
+really largish,1.69
+elephantine,1.1
+very elephantine,1.97
+less elephantine,0.77
+more elephantine,1.31
+much elephantine,1.64
+really elephantine,1.75
+prodigious,1.05
+very prodigious,1.89
+less prodigious,0.73
+more prodigious,1.26
+much prodigious,1.57
+really prodigious,1.68
+humongous,1.01
+very humongous,1.82
+less humongous,0.71
+more humongous,1.21
+much humongous,1.51
+really humongous,1.62
+huge,1.04
+very huge,1.86
+less huge,0.73
+more huge,1.24
+much huge,1.55
+really huge,1.66
+galactic,1.1
+very galactic,1.99
+less galactic,0.77
+more galactic,1.33
+much galactic,1.66
+really galactic,1.77
+ample,1.01
+very ample,1.83
+less ample,0.71
+more ample,1.22
+much ample,1.52
+really ample,1.62
+immense,1.08
+very immense,1.95
+less immense,0.76
+more immense,1.3
+much immense,1.62
+really immense,1.73
+rangy,1.07
+very rangy,1.92
+less rangy,0.75
+more rangy,1.28
+much rangy,1.6
+really rangy,1.71
+extensive,1.08
+very extensive,1.95
+less extensive,0.76
+more extensive,1.3
+much extensive,1.62
+really extensive,1.73
+king-sized,1.02
+very king-sized,1.84
+less king-sized,0.71
+more king-sized,1.22
+much king-sized,1.53
+really king-sized,1.63
+full-size,1.18
+very full-size,2.13
+less full-size,0.83
+more full-size,1.42
+much full-size,1.77
+really full-size,1.89
+life-size,1.09
+very life-size,1.97
+less life-size,0.77
+more life-size,1.31
+much life-size,1.64
+really life-size,1.75
+astronomical,1.17
+very astronomical,2.1
+less astronomical,0.82
+more astronomical,1.4
+much astronomical,1.75
+really astronomical,1.87
+walloping,1.2
+very walloping,2.15
+less walloping,0.84
+more walloping,1.43
+much walloping,1.79
+really walloping,1.91
+queen-sized,1.07
+very queen-sized,1.92
+less queen-sized,0.75
+more queen-sized,1.28
+much queen-sized,1.6
+really queen-sized,1.71
+double,1.1
+very double,1.97
+less double,0.77
+more double,1.31
+much double,1.64
+really double,1.75
+big,0.9
+very big,1.62
+less big,0.63
+more big,1.08
+much big,1.35
+really big,1.44
+biggest,1.14
+very biggest,2.05
+less biggest,0.8
+more biggest,1.37
+much biggest,1.71
+really biggest,1.82
