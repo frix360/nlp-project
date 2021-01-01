@@ -64,8 +64,8 @@ if __name__ == '__main__':
     # print(word.lch_similarity(lower_bound))
     # print(word.lch_similarity(upper_bound))
 
-    # context = 'Button is orange and says click me. Button is also very big'
-  
+    context = 'Button is orange and says click me. Button is also very big'
+
 
     # data = pandas.read_csv('set_0.csv')
     # data.head()
@@ -73,52 +73,52 @@ if __name__ == '__main__':
     # maxlen = 25
     # num_classes = 28
 
-    # generator = HtmlGenerator()
+    generator = HtmlGenerator()
 
-    # html = generator.generate_html(context)
+    html = generator.generate_html(context)
 
-    # with open("output.html", "w+") as text_file:
-    #     text_file.write(html)
+    with open("output.html", "w+") as text_file:
+        text_file.write(html)
     
-    model = SizeModel('lstm_tokenizer.pickle')
-    # saved_model='models/lstm_model.h5'
+    # model = SizeModel('lstm_tokenizer.pickle')
+    # # saved_model='models/lstm_model.h5'
     
-    # print(model.predict('less undersize'))
-    # print(model.predict('big'))
-    data = pandas.read_csv('size_data.csv')
-    features = data['name']
-    labels = data['size']
-    processed_features = []
+    # # print(model.predict('less undersize'))
+    # # print(model.predict('big'))
+    # data = pandas.read_csv('size_data.csv')
+    # features = data['name']
+    # labels = data['size']
+    # processed_features = []
 
-    for sentence in range(0, len(features)):
-        # Remove all the special characters
-        processed_feature = re.sub(r'\W', ' ', str(features[sentence]))
+    # for sentence in range(0, len(features)):
+    #     # Remove all the special characters
+    #     processed_feature = re.sub(r'\W', ' ', str(features[sentence]))
 
-        # remove all single characters
-        processed_feature= re.sub(r'\s+[a-zA-Z]\s+', ' ', processed_feature)
+    #     # remove all single characters
+    #     processed_feature= re.sub(r'\s+[a-zA-Z]\s+', ' ', processed_feature)
 
-        # Remove single characters from the start
-        processed_feature = re.sub(r'\^[a-zA-Z]\s+', ' ', processed_feature) 
+    #     # Remove single characters from the start
+    #     processed_feature = re.sub(r'\^[a-zA-Z]\s+', ' ', processed_feature) 
 
-        # Substituting multiple spaces with single space
-        processed_feature = re.sub(r'\s+', ' ', processed_feature, flags=re.I)
+    #     # Substituting multiple spaces with single space
+    #     processed_feature = re.sub(r'\s+', ' ', processed_feature, flags=re.I)
 
-        # Removing prefixed 'b'
-        processed_feature = re.sub(r'^b\s+', '', processed_feature)
+    #     # Removing prefixed 'b'
+    #     processed_feature = re.sub(r'^b\s+', '', processed_feature)
 
-        # Converting to Lowercase
-        processed_feature = processed_feature.lower()
+    #     # Converting to Lowercase
+    #     processed_feature = processed_feature.lower()
 
-        processed_features.append(processed_feature)
+    #     processed_features.append(processed_feature)
     
-    model.fit(data, processed_features)
-    model.save_model('models/lstm_model.h5')
+    # model.fit(data, processed_features)
+    # model.save_model('models/lstm_model.h5')
     
-    print('very big', model.predict('very big'))
-    print('biggest', model.predict('biggest'))
-    print('big', model.predict('big'))
-    print('huge', model.predict('huge'))
-    print('small', model.predict('small'))
-    print('very small', model.predict('very small'))
+    # print('very big', model.predict('very big'))
+    # print('biggest', model.predict('biggest'))
+    # print('big', model.predict('big'))
+    # print('huge', model.predict('huge'))
+    # print('small', model.predict('small'))
+    # print('very small', model.predict('very small'))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

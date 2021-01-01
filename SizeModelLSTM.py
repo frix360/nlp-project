@@ -22,20 +22,20 @@ class SizeModel:
         self.model.load_weights(saved_model)
 
     def __initialize_model(self):
-        self.model = Sequential()
-        self.model.add(LSTM(128, return_sequences=True, input_shape=(self.maxlen, self.num_classes)))
-        self.model.add(LSTM(64))
-        self.model.add(Dense(64, activation='relu'))
-        self.model.add(Dense(1, activation='sigmoid'))
-        self.model.compile(optimizer='adam', loss='mse', metrics=['acc'])
-        self.model.summary()
-        
         # self.model = Sequential()
-        # self.model.add(LSTM(12, return_sequences=True, input_shape=(self.maxlen, self.num_classes)))
-        # self.model.add(LSTM(4))
-        # self.model.add(Dense(4, activation='relu'))
+        # self.model.add(LSTM(128, return_sequences=True, input_shape=(self.maxlen, self.num_classes)))
+        # self.model.add(LSTM(64))
+        # self.model.add(Dense(64, activation='relu'))
         # self.model.add(Dense(1, activation='sigmoid'))
         # self.model.compile(optimizer='adam', loss='mse', metrics=['acc'])
+        # self.model.summary()
+        
+        self.model = Sequential()
+        self.model.add(LSTM(12, return_sequences=True, input_shape=(self.maxlen, self.num_classes)))
+        self.model.add(LSTM(4))
+        self.model.add(Dense(4, activation='relu'))
+        self.model.add(Dense(1, activation='sigmoid'))
+        self.model.compile(optimizer='adam', loss='mse', metrics=['acc'])
         # self.model.summary()
 
     def predict(self, size):

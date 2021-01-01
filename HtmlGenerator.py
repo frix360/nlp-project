@@ -1,7 +1,7 @@
 from transformers import pipeline
 from Questioner import Questioner
 from ColorsModel import ColorsModel
-from SizeModel import SizeModel
+from SizeModelLSTM import SizeModel
 from DataTransformer import DataTransformer
 
 
@@ -11,7 +11,7 @@ class HtmlGenerator:
         self.questioner = Questioner()
         self.colors_model = ColorsModel(num_classes=28, maxlen=25, tokenizer_file_name="tokenizer.pickle",
                                         saved_model='./models/model_3.h5')
-        self.size_model = SizeModel()
+        self.size_model = SizeModel('lstm_tokenizer.pickle', saved_model='models/lstm_model.h5')
         self.answers = {
                            'color': None,
                            'size': None,
@@ -21,6 +21,8 @@ class HtmlGenerator:
         self.predicted_text = None
         self.predicted_size = None
         self.predicted_styles = None
+        self.base_size = [256, 128]
+        self.font_size = 1
 
     def __init_template(self):
         return '''
@@ -61,13 +63,28 @@ class HtmlGenerator:
 
         return result
 
-    def __generate_button_styles(self, color, size):
+    def __decide_font_color(self, color):
+        if ((color[0]*0.299 + color[1]*0.587 + color[2]*0.114) > 186):
+            return '#000000'
+        return '#ffffff'
+
+    def __generate_button_styles(self, color, size_ratio):
         formatted_color = f'rgb({color[0]}, {color[1]}, {color[2]})'
+        font_color = self.__decide_font_color(color)
 
         return '''
                         background-color: {color};
-                        width: {width}px;
-                        height: {height}px;'''.format(color=formatted_color, width=size[0], height=size[1])
+                        min-width: {width}px;
+                        height: {height}px;
+                        color: {font_color};
+                        font-size: {font_size}em'''.format(
+                            color=formatted_color,
+                            width=self.base_size[0] * (size_ratio), 
+                            height=self.base_size[1] * (size_ratio),
+                            font_size=self.font_size * (1/size_ratio), 
+                            font_color=font_color
+                        )
+                
 
     def __get_predicted_color(self):
         return self.colors_model.predict(self.answers['color'].answer)

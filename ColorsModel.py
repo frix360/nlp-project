@@ -29,7 +29,7 @@ class ColorsModel:
         self.model.add(Dense(128, activation='relu'))
         self.model.add(Dense(3, activation='sigmoid'))
         self.model.compile(optimizer='adam', loss='mse', metrics=['acc'])
-        self.model.summary()
+        # self.model.summary()
 
     def __scale(self, n):
         return int(n * 255)

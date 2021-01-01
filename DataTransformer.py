@@ -14,7 +14,7 @@ class DataTransformer:
         return value / 255.0
 
     def __norm_size(self, value):
-        return value / value.max()
+        return (value - value.min()) / (value.max() - value.min())
 
     def transform_size_input_data(self, data, names):
         self.tokenizer.fit_on_texts(names) # [1: 'I', 2, 3, 4]
