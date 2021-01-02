@@ -7,7 +7,7 @@ from DataTransformer import DataTransformer
 
 class HtmlGenerator:
     def __init__(self):
-        self.template = self.__init_template()
+        self.__init_template()
         self.questioner = Questioner()
         self.colors_model = ColorsModel(num_classes=28, maxlen=25, tokenizer_file_name="tokenizer.pickle",
                                         saved_model='./models/model_3.h5')
@@ -25,23 +25,11 @@ class HtmlGenerator:
         self.font_size = 1
 
     def __init_template(self):
-        return '''
-        <!DOCTYPE html>
-        <html>
-            <head> 
-                <style> 
-                    .button {
-                          {--buttonStyles--}
-                    }            
-                </style>
-            </head>
-            <body>
-                <button class='button'>{--buttonText--}</button>
-            </body>
-        </html>
+        self.template = '''
+             <button class='button' style='{--buttonStyles--}' class='button result-button'>{--buttonText--}</button>
         '''
 
-    def generate_html(self, context):
+    def generate_button_html(self, context):
         self.answers = self.questioner.examine_context(context)
 
         self.predicted_color = self.__get_predicted_color()
@@ -49,11 +37,17 @@ class HtmlGenerator:
         self.predicted_text = self.__get_predicted_text()
 
         replacer = {
-            'buttonStyles': self.__generate_button_styles(self.predicted_color, self.predicted_size),
+            'buttonStyles': self.generate_button_styles(self.predicted_color, self.predicted_size),
             'buttonText': self.predicted_text
         }
 
-        return self.__replace_template(replacer)
+        return {
+            'html': self.__replace_template(replacer),
+            'answers': self.answers,
+            'color_prediction': self.predicted_color,
+            'size_prediction': self.predicted_size,
+            'text_prediction': self.predicted_text
+        }
 
     def __replace_template(self, replacer):
         result = self.template
@@ -64,11 +58,11 @@ class HtmlGenerator:
         return result
 
     def __decide_font_color(self, color):
-        if ((color[0]*0.299 + color[1]*0.587 + color[2]*0.114) > 186):
+        if ((color[0] * 0.299 + color[1] * 0.587 + color[2] * 0.114) > 186):
             return '#000000'
         return '#ffffff'
 
-    def __generate_button_styles(self, color, size_ratio):
+    def generate_button_styles(self, color, size_ratio):
         formatted_color = f'rgb({color[0]}, {color[1]}, {color[2]})'
         font_color = self.__decide_font_color(color)
 
@@ -76,15 +70,12 @@ class HtmlGenerator:
                         background-color: {color};
                         min-width: {width}px;
                         height: {height}px;
-                        color: {font_color};
-                        font-size: {font_size}em'''.format(
-                            color=formatted_color,
-                            width=self.base_size[0] * (size_ratio), 
-                            height=self.base_size[1] * (size_ratio),
-                            font_size=self.font_size * (1/size_ratio), 
-                            font_color=font_color
-                        )
-                
+                        color: {font_color};'''.format(
+            color=formatted_color,
+            width=self.base_size[0] * (size_ratio),
+            height=self.base_size[1] * (size_ratio),
+            font_color=font_color
+        )
 
     def __get_predicted_color(self):
         return self.colors_model.predict(self.answers['color'].answer)

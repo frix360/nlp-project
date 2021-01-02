@@ -6,20 +6,22 @@ class Questions:
     def __init_questions(self):
         self.questions = {
             'color': [
-                'What is the color of the button',
-                'What is the button\'s color',
-                'Color of the button',
-                'Button\'s color is'
+                'What is the color of the button?',
+                'What is the button\'s color?',
+                'Color of the button is?',
+                'Button\'s color is?'
             ],
             'size': [
-                'What is the size of a button',
-                'Button size is',
-                'What is the button\'s size',
+                'What is the size of a button?',
+                'Button size is?',
+                'What is the button\'s size?',
+                'What is the size?',
+                'Size is?'
             ],
             'text': [
-                'What does the button say',
-                'What is the text of the button',
-                'What is written on the button'
+                'What does the button say?',
+                'What is the text of the button?',
+                'What is written on the button?'
             ]
         }
 

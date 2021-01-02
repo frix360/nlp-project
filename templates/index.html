@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button generator</title>
+    <link href="{{ url_for('static', filename='css/bulma.min.css') }}" rel="stylesheet">
+    <style>
+        .container {
+            padding-top: 50px;
+        }
+        .output-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="columns is-centered">
+        <div class="column is-6">
+            <h3 class="title is-3">Button generator</h3>
+            <div class="columns is-multiline">
+
+                <div class="column is-12">
+                    <form action="/" method="POST">
+                        <div class="field">
+                            <label class="label">Context</label>
+                            <div class="control">
+                                <textarea name="context" class="textarea" placeholder="Button is ...">{{ context }}</textarea>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary">Generate button</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                {% if html %}
+
+
+                <div class="column is-12">
+                    <h4 class="title is-4">
+                        Output:
+                    </h4>
+                    <div class="output-container">
+                        {{ html | safe}}
+                    </div>
+
+
+                    <pre>
+                        <code>
+                             {{answers}}
+                        </code>
+                    </pre>
+                </div>
+                {% endif %}
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+</body>
+</html>
