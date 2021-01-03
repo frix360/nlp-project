@@ -1,4 +1,5 @@
 import tensorflow as tf
+import datetime
 import scipy.stats as stats
 import numpy as np
 import pickle
@@ -14,6 +15,8 @@ class ColorsModel:
         self.num_classes = num_classes
         self.history = None
         self.__initialize_model()
+        self.callback = []
+        self.__initialize_callback()
         self.data_transformer = DataTransformer(maxlen, num_classes)
         if saved_model is not None:
             self.data_transformer.tokenizer = self.load_tokenizer(tokenizer_file_name)
@@ -21,6 +24,10 @@ class ColorsModel:
 
     def __load_saved_model(self, saved_model):
         self.model.load_weights(saved_model)
+
+    def __initialize_callback(self):
+        log_dir = "logs/fit/color_model/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+        self.callback.append(tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1))
 
     def __initialize_model(self):
         self.model = Sequential()
@@ -41,8 +48,9 @@ class ColorsModel:
 
     def fit(self, data, colors, epohs=40, batch_size=32, validation_split=0.1):
         normalized_values, one_hot_names = self.data_transformer.transform_colors_input_data(data=data, colors=colors)
-        self.save_tokenizer('tokenizer.pickle')
-        self.history = self.model.fit(one_hot_names, normalized_values, epohs, batch_size, validation_split)
+        self.save_tokenizer('tokenizer_2.pickle')
+        self.history = self.model.fit(x=one_hot_names, y=normalized_values, epochs=epohs, batch_size=batch_size,
+                                      validation_split=validation_split, verbose=1, callbacks=self.callback)
 
     def save_model(self, file_name):
         self.model.save_weights(file_name)
