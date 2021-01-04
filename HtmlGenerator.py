@@ -9,9 +9,9 @@ class HtmlGenerator:
     def __init__(self):
         self.__init_template()
         self.questioner = Questioner()
-        self.colors_model = ColorsModel(num_classes=28, maxlen=25, tokenizer_file_name="tokenizer.pickle",
+        self.colors_model = ColorsModel(num_classes=28, maxlen=25, tokenizer_file_name="./tokenizer/tokenizer.pickle",
                                         saved_model='./models/model_3.h5')
-        self.size_model = SizeModel('lstm_tokenizer_3.pickle', saved_model='models/lstm_model_3.h5')
+        self.size_model = SizeModel('./tokenizer/lstm_tokenizer_3.pickle', saved_model='models/lstm_model_3.h5')
         self.answers = {
                            'color': None,
                            'size': None,

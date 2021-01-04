@@ -48,7 +48,7 @@ class ColorsModel:
 
     def fit(self, data, colors, epohs=40, batch_size=32, validation_split=0.1):
         normalized_values, one_hot_names = self.data_transformer.transform_colors_input_data(data=data, colors=colors)
-        self.save_tokenizer('tokenizer_2.pickle')
+        self.save_tokenizer('./tokenizer/tokenizer_2.pickle')
         self.history = self.model.fit(x=one_hot_names, y=normalized_values, epochs=epohs, batch_size=batch_size,
                                       validation_split=validation_split, verbose=1, callbacks=self.callback)
 

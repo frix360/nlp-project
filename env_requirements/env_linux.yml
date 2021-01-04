@@ -160,4 +160,3 @@ dependencies:
     - soupsieve==2.1
     - toml==0.10.2
     - typed-ast==1.4.1
-prefix: /home/zygimantas/miniconda3/envs/nlp

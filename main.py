@@ -37,14 +37,14 @@ def index():
 
     # with open("output2.html", "w+") as text_file:
     #     text_file.write(html)
-    # model = SizeModel('lstm_tokenizer_3.pickle', saved_model='models/lstm_model_3.h5')
+    # model = SizeModel('./tokenizer/lstm_tokenizer_3.pickle', saved_model='models/lstm_model_3.h5')
     # data = pandas.read_csv('size_data.csv')
     # features = data['name']
     # labels = data['size']
 
     # model.fit(data, features)
     # model.save_model('models/lstm_model_3.h5')
-    # model.save_tokenizer('lstm_tokenizer_3.pickle')
+    # model.save_tokenizer('./tokenizer/lstm_tokenizer_3.pickle')
 
     # print('very big', model.predict('very big'))
     # print('biggest', model.predict('biggest'))
