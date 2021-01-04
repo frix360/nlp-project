@@ -29,18 +29,13 @@ class SizeModel:
         self.callback.append(tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1))
 
     def __initialize_model(self):
-        # self.model = Sequential()
-        # self.model.add(LSTM(128, return_sequences=True, input_shape=(self.maxlen, self.num_classes)))
-        # self.model.add(LSTM(64))
-        # self.model.add(Dense(64, activation='relu'))
-        # self.model.add(Dense(1, activation='sigmoid'))
-        # self.model.compile(optimizer='adam', loss='mse', metrics=['acc'])
-        # self.model.summary()
-        
         self.model = Sequential()
         self.model.add(LSTM(12, return_sequences=True, input_shape=(self.maxlen, self.num_classes)))
+        self.model.add(Dropout(0.2))
         self.model.add(LSTM(4))
+        self.model.add(Dropout(0.2))
         self.model.add(Dense(4, activation='relu'))
+        self.model.add(Dropout(0.2))
         self.model.add(Dense(1, activation='sigmoid'))
         self.model.compile(optimizer='adam', loss='mse', metrics=['acc'])
         # self.model.summary()
